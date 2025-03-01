@@ -1,11 +1,34 @@
-#Ploychat - Online Multi-Lingual Chat Room
+# Polychat - Online Multi-Lingual Chat Room
 
-Polychat is a real-time online chatroom application where users can text each other in different dialects and languages. The app supports automatic language detection and translation, with specific support for Tamil and English. Built using modern web technologies and cloud APIs, Mozhi Medhai aims to bridge the gap in language barriers during online communication.
+![Project Output](PLACEHOLDER_FOR_IMAGE_LINK)
+
+Polychat is a real-time online chatroom application where users can text each other in different dialects and languages. The app supports automatic language detection and translation, with specific support for Tamil and English. Built using modern web technologies and cloud APIs, Polychat-MultiLingual_Online_ChatRoom aims to bridge the gap in language barriers during online communication.
+
+## Available Features
+
+### Features:
+- **Language Setting**: Available languages for now are English and French.
+- **User Authentication**: Creating an account using a verification code from Clerk.
+- **Online Status Preferences**: Change online status preferences.
+- **Real-Time Online Tracking**: Track online status of users in real time.
+- **Account Management**:
+  - Deletion of account.
+  - Change of password.
+  - Handling deleted users.
+
+### Limitations:
+- Translations only work for languages with no typos and formal language.
+- Only two languages are supported at the moment.
+
+### Future Releases:
+- Add more language compatibility.
+- Improve handling of typos and modern linguistic variations.
+
+---
 
 ## Features
 
 - **Real-Time Messaging**: Chat with other users in real-time.
-- **Automatic Language Detection**: Identify the input language using Google Language Detection API.
 - **Language Translation**: Translate text using Microsoft Azure Cognitive Services Translation API.
 - **User Authentication**: Secure authentication and user management using Clerk.
 - **TypeScript and React**: Built with a modern frontend stack for seamless user experience.
@@ -22,27 +45,26 @@ Polychat is a real-time online chatroom application where users can text each ot
 ├── convex/                # Database-related files
 ├── hooks/                 # Custom React hooks
 ├── lib/                   # Library files
+├── node_modules/          # Dependencies
 ├── providers/             # Context and providers for global state
 ├── public/                # Static assets
 ├── types/                 # TypeScript type definitions
+├── .env.local             # Environment variables
 ├── .gitignore             # Git ignore rules
-├── README.md              # Project documentation
-├── azure_translation.py   # Azure Translation API integration
-├── censor-beep-88052.mp3  # Censorship audio file
 ├── components.json        # UI component configuration
 ├── eslint.config.mjs      # ESLint configuration
-├── filtering.py           # Content filtering logic
-├── google_speech.py       # Google Speech-to-Text integration
-├── langdetection.ipynb    # Notebook for language detection experiments
-├── main.py                # Main Python script
+├── LICENSE                # License file
 ├── middleware.ts          # Next.js middleware
+├── next-env.d.ts          # Next.js environment types
 ├── next.config.ts         # Next.js configuration
-├── output.mp3             # Audio output file
+├── package-lock.json      # NPM package lock file
 ├── package.json           # Node.js dependencies
 ├── postcss.config.mjs     # PostCSS configuration
-├── speech_text.py         # Speech-to-text processing
-├── style.css              # Global CSS styles
+├── README.md              # Project documentation
+├── server.py              # Backend server script
 ├── tailwind.config.ts     # TailwindCSS configuration
+├── tsconfig.json          # TypeScript configuration
+├── translation.py         # Translation service script
 ```
 
 ---
@@ -55,7 +77,7 @@ Ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v16 or higher)
 - [Python](https://www.python.org/) (v3.8 or higher)
-- Azure and Google API credentials
+- Azure API credentials
 
 ---
 
@@ -64,8 +86,8 @@ Ensure you have the following installed:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-repo/mozhi-medhai.git
-   cd mozhi-medhai
+   git clone https://github.com/your-repo/polychat-multilingual-online-chatroom.git
+   cd polychat-multilingual-online-chatroom
    ```
 
 2. **Install Dependencies**:
@@ -82,7 +104,6 @@ Ensure you have the following installed:
    ```env
    AZURE_TRANSLATION_KEY=your_azure_key
    AZURE_TRANSLATION_ENDPOINT=your_azure_endpoint
-   GOOGLE_API_KEY=your_google_key
    CLERK_FRONTEND_API=your_clerk_api
    ```
 
@@ -101,8 +122,23 @@ Ensure you have the following installed:
 2. **Run Python Backend Services** (if required):
 
    ```bash
-   python main.py
+   python server.py
    ```
+
+3. **Start Convex Development Server**:
+
+   ```bash
+   npx convex dev
+   ```
+
+4. **Clerk Setup**:
+   Follow the [Clerk Quickstart Guide](https://clerk.com/docs/quickstarts/nextjs) to set up authentication.
+
+5. **Convex Setup**:
+   Refer to the [Convex Quickstart Guide](https://docs.convex.dev/quickstart/nextjs) for integrating Convex into the application.
+
+6. **Convex & Clerk Authentication**:
+   For authentication with Clerk, check the [Convex Auth Documentation](https://docs.convex.dev/auth/clerk).
 
 ---
 
@@ -118,7 +154,6 @@ Ensure you have the following installed:
 ## APIs Used
 
 - **[Azure Cognitive Services Translation API](https://azure.microsoft.com/en-us/products/cognitive-services/translator/)**
-- **[Google Cloud Language Detection API](https://cloud.google.com/translate)**
 
 ---
 
@@ -141,5 +176,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ## Acknowledgments
 
 - [Microsoft Azure Cognitive Services](https://azure.microsoft.com/)
-- [Google Cloud APIs](https://cloud.google.com/)
 - [TailwindCSS](https://tailwindcss.com/)
+- [Clerk](https://clerk.dev/)
+- [Convex](https://convex.dev/)
+
