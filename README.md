@@ -1,6 +1,7 @@
 **# Polychat - Online Multi-Lingual Chat Room
 
-![Project Output]([(https://github.com/Harii2K4/Polychat-MultiLingual_Online_ChatRoom/blob/main/output.png)])
+![Project Output](https://github.com/Harii2K4/Polychat-MultiLingual_Online_ChatRoom/blob/main/output.png)
+
 
 Polychat is a real-time online chatroom application where users can text each other in different dialects and languages. The app supports automatic language detection and translation, with specific support for Tamil and English. Built using modern web technologies and cloud APIs, Polychat-MultiLingual_Online_ChatRoom aims to bridge the gap in language barriers during online communication.
 
