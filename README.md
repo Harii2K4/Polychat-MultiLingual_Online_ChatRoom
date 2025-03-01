@@ -1,4 +1,4 @@
-**# Polychat - Online Multi-Lingual Chat Room
+# **Polychat - Online Multi-Lingual Chat Room**
 
 ![Project Output](https://github.com/Harii2K4/Polychat-MultiLingual_Online_ChatRoom/blob/main/output.png)
 
