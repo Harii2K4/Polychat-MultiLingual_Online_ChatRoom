@@ -1,6 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import requests, uuid, json
+import requests, uuid, json
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
 
 app = FastAPI()
 
@@ -14,7 +21,7 @@ app.add_middleware(
 )
 
 def translation(text, lang):
-    key = "998d581023794ab58fe6e4fdb3a6fa24"
+    key = os.getenv("Azure_Key")
     endpoint = "https://api.cognitive.microsofttranslator.com/"
     location = "westus2"
 
