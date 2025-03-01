@@ -1,4 +1,4 @@
-# Polychat - Online Multi-Lingual Chat Room
+**# Polychat - Online Multi-Lingual Chat Room
 
 ![Project Output](PLACEHOLDER_FOR_IMAGE_LINK)
 
@@ -180,3 +180,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 - [Clerk](https://clerk.dev/)
 - [Convex](https://convex.dev/)
 
+**
