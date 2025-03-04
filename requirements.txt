@@ -2,3 +2,6 @@ fastapi
 uuid
 requests
 python-dotenv   
+huggingface_hub
+SpellChecker
+re

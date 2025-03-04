@@ -4,7 +4,8 @@ import requests, uuid, json
 import requests, uuid, json
 from dotenv import load_dotenv
 import os
-
+from textsyn import textSyn
+from spellcheck import spellCheck
 # Load environment variables from .env file
 load_dotenv()
 
@@ -40,7 +41,19 @@ def translation(text, lang):
         'X-ClientTraceId': str(uuid.uuid4())
     }
 
-    body = [{'text': text}]
+    flag= spellCheck(text) if lang=="English" else False
+    if(flag):
+        text=textSyn(text)
+        body = [{
+            'text': text
+        }]
+
+    else:
+    
+        body = [{
+            'text': text
+        }]
+
     response = requests.post(constructed_url, params=params, headers=headers, json=body)
 
     if response.status_code == 200:
