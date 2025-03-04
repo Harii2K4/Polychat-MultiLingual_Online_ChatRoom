@@ -16,9 +16,9 @@ Polychat is a real-time online chatroom application where users can text each ot
   - Deletion of account.
   - Change of password.
   - Handling deleted users.
-
+- Translations only work for languages with typos and genz slang 
 ### Limitations:
-- Translations only work for languages with no typos and formal language.
+- Slang and typo detection only for english  
 - Only two languages are supported at the moment.
 
 ### Future Releases:
