@@ -120,10 +120,10 @@ Ensure you have the following installed:
 
    The app will be available at [http://localhost:3000](http://localhost:3000).
 
-2. **Run Python Backend Services** (if required):
+2. **Run FastApi** :
 
    ```bash
-   python server.py
+   uvicorn server:app --host 0.0.0.0 --port 8000  
    ```
 
 3. **Start Convex Development Server**:
